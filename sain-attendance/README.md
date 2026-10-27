@@ -8,17 +8,12 @@ An admin uploads each month's Excel file in the browser. It needs no Claude and 
 1. **GitHub:** create a new repository (it can be private) and upload everything in this folder to it, keeping the folder structure.
 2. **Netlify:** *Add new site → Import an existing project → GitHub*, then pick the repository.
    You don't need to change any build settings. `netlify.toml` already has them.
-3. **Password:** in Netlify, go to *Site configuration → Environment variables → Add a variable*:
-   - Key: `ADMIN_PASSWORD`
-   - Value: a strong password (only the people who upload should know it)
-
    Then run *Deploys → Trigger deploy* once so the site picks the password up.
-4. **Upload September:** open the site, type `11223344` as the employee code, enter the password,
-   and upload `seed/2026-09.json` (the September data that was live before). You can upload the Excel file instead.
+4. **Upload September:** open the site and upload `seed/2026-09.json` (the September data that was live before). You can upload the Excel file instead.
 
 ## Every month
 
-Open the site → code `11223344` → password → choose the Excel file → check the numbers → **Нийтлэх**.
+Open the site → **Нийтлэх**.
 Uploading a month that already exists replaces it. "Устгах" removes a month.
 
 ## How it reads the Excel file
